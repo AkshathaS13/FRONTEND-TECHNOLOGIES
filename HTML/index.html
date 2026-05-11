@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Register Form</title>
+</head>
+<body>
+    <center>
+        <form action="Mediatag.html" method="get" autocomplete="on">
+        <br>
+        <fieldset>
+            <legend>Personal Information</legend>
+        <br>
+        <h3>Registration Form</h3>
+       <label for = "username">Enter Username: </label>
+       <input type = "text" id="username" name="username" placeholder="Enter your Username" required>
+       <br>
+       <br>
+       <label for="password">Enter Password: <span style="color: rgb(107, 3, 3);">*</span></label>
+       <input type="password" id ="password" name="password" placeholder="Enter your Password" required>
+       <br>
+       <br>
+       <label for="email">Enter Email: <span style="color:red">*</span></label>
+       <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+       <br>
+       <br>
+       <label for="phone">Mobile Number:</label>
+       <input type="tel" id="phone" name="phone">
+       <br>
+       <br>
+       <label for="age">Age</label>
+       <input type="number" id="age" name="age" min="1" max="150">
+       <br>
+       <br>
+       <label>Gender:</label>
+       <label><input type="radio" name="opt" value="Male">Male</label>
+       <label><input type="radio" name="opt" value="Female">Female</label>
+       <br>
+       <br>
+       <label for="captcha">Captcha</label>
+       <input type="text" id="captcha" name="captcha" placeholder="CAPTCHA">
+       </fieldset>
+       <br>
+       <br>
+       <fieldset>
+        <legend>Other Information</legend>
+        <br>
+       <label for="date">Date of Birth</label>
+       <input type="date" id="date">
+       <br>
+       <br>
+       <label for="time">Time</label>
+       <input type="time" id="time">
+       <br>
+       <br>
+       <label for="week">Select Week:</label>
+       <input type="week" id="week">
+       <br>
+       <br>
+       <label for="url">Profile URL: </label>
+       <input type="url" id="url">
+       <br>
+       <br>
+       <label for="color">Favorite Color:</label>
+       <input type="color" id="color">
+       <br>
+       <br>
+       <label for="AadharCard">Aadhar Card:</label>
+       <input type="file" id="AadharCard" accept=".pdf, .jpg">
+       <br>
+       <br>
+       <label for="range">Select Range:</label>
+       <input type="range" id="range" name="range" min="0" max="5" value="0">
+       <br>
+       <br>
+       <label for="search">Search:</label>
+       <input type="search" id="search" name="search" placeholder="Search...">
+       <br>
+       <br>
+       <label for="url">Other:</label>
+       <input type="image" id="url" name="url" src="beautiful-nature-photo.jpg" width="250px" height="250px">
+       <br>
+       <br>
+       <label><input type="checkbox" name="opt1" value="cash">Cash</label>
+       <label><input type="checkbox" name="opt2" value="UPI">Online Payment</label>
+       <br>
+       <br>
+       <label>You Allowed:</label>
+       <input type="hidden">
+       <br>
+       <br>
+       <label for="tech">Choose the Tech Stack:</label>
+       <select name="tech">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+       </select>
+       <br>
+       <br>
+       </fieldset>
+       <br>
+       <br>
+       <fieldset>
+        <legend>COmments section</legend>
+        <br>
+       <label for="comments">Comments:</label>
+       <textarea id="comments" row="20" cols="20" placeholder="Enter comments....">
+       </textarea>
+       </fieldset>
+       <br>
+       <br>
+       <button type="submit">Submit</button>
+       <input type="reset" value="Cancel">
+
+    </center></form>
+    
+</body>
+</html>
+
+

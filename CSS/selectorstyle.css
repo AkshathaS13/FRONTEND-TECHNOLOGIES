@@ -1,0 +1,72 @@
+/* Universal Selector */
+
+* {
+    font-style: italic;
+    color: blue;
+}
+
+/*Type Selector or Tag Selector*/
+p {
+    
+    color: blueviolet
+}
+
+h3 {
+    text-align: center;
+}
+
+/*ID Selector*/
+
+#para {
+    text-align: center;
+}
+
+/*Class Selector*/
+.redpara {
+    color: red
+}
+
+.line {
+    text-decoration: underline;
+}
+
+
+
+/*Group Selector*/
+h1, h3, h5 {
+    background-color:aqua;
+}
+
+/*Attribute Selector*/
+input[type=email] {
+    background-color:aquamarine;
+}
+
+input[type=text] {
+    background-color: aquamarine;
+}
+
+/*Desendant Selector*/
+ div p {
+    color: green;
+ }
+
+ /*Child Selector*/
+ ul > li {
+    list-style-type: circle;
+    color: rgb(16, 2, 111);
+ }
+
+ /*Adjacent Sibling Selector*/
+ h2 + p {
+    color:darkmagenta;
+    background-color: lightpink;
+ }
+
+ /*General Sibling Selector*/
+ h2 ~ p {
+    color:purple;
+    font-size:16px;
+ }
+ 
+ 
