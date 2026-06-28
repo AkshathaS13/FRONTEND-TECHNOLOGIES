@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popups</title>
+    <h3>Popups in JS</h3>
+</head>
+<body>
+    <script>
+        //alert
+        alert("This is an alert!");
+        //confirm
+        let choice = confirm("Do you want to proceed?");
+        document.writeln("The user selected:", choice);
+        document.writeln("<br>");
+        document.writeln("The user selected:", (choice ? "ok" : "cancel"));
+
+        //prompt
+        let name = prompt("Enter your name:");
+        alert("The user entered:" + name);
+    </script>
+</body>
+</html>

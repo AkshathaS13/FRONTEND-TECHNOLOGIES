@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        body {
+            background-color: rgb(121, 185, 237);
+            color:aliceblue;
+            animation-name: colorchange;
+            animation-duration: 5s;
+        }
+        h3 {
+            animation-name: fadeIn;
+            animation-duration: 8s;
+        }
+        
+        p {
+            animation-name: slideIn;
+            animation-duration: 5s;
+        }
+        @keyframes colorchange {
+            25% {background-color: rgb(3, 3, 95);}
+            50% {background-color: rgb(44, 44, 236);}
+            75% {background-color: rgb(94, 94, 229);}
+            100% {background-color: rgb(192, 192, 243);}
+        }
+
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        @keyframes slideIn {
+            0% {transform: translateX(-100%);}
+            100% {transform: translateX(0);}
+        }
+    </style>
+</head>
+<body>
+    <h3>Animations in CSS</h3>
+    <p>Here you can see some CSS animations in action. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, unde? Officiis, veniam incidunt veritatis et, eius nostrum a consequatur eos ipsum nobis mollitia iste impedit at optio ipsam, ea culpa?</p>
+</body>
+</html>

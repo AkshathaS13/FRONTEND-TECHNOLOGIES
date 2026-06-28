@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h2>DOM comparisons of  Methods</h2>
+    <h1>DOM Methods</h1>
+    <p>getElementByTagName</p>
+    <p id ="paraid">getElementById</p>
+    <p class="para">getElementsByClassName</p>
+    <p class="para">getElementByName</p>
+    <p>querySelector</p>
+    <h4>Hello</h4>
+    <h4>ThankYou</h4>
+    <input type = "text" placeholder="Enter your name" name = "faviteHero">
+    <p id = "paravalue">Value displayed Here</p>
+    <button onclick="change()"> Click me to change</button>
+
+    <script>
+        let p = document.querySelectorAll("h4");
+        p.forEach((p) => {p.style.backgroundColor = "lightgreen"});
+        document.querySelector("h1").innerText = "DOM Methods in JavaScript";
+        document.querySelector("button").textContent = "Click me";
+        document.querySelector("h2").innerHTML = "<h3><i>DOM comparisons Methods</i></h3>";
+        document.getElementById("paraid").style.color = "blue";
+        document.getElementsByTagName("p")[0].style.color = "green";
+
+        let text = document.getElementsByClassName("para");
+        for(let i =0; i<text.length; i++){
+            text[i].style.color = "Orange";
+            text[i].style.backgroundColor = "lightblue";
+        }
+       function change() {
+        let x = document.getElementsByName("faviteHero")[0].value;
+        document.getElementById("paravalue").innerText = x;
+        let paras = document.getElementsByTagName("p");
+        for(let i=0; i<paras.length; i++){
+        paras[i].style.color = "red";
+        paras[i].style.backgroundColor = "yellow";
+       }
+    }
+    </script>
+</body>
+</html>

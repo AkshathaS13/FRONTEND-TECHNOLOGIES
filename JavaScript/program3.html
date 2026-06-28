@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation Attribute</title>
+</head>
+<body>
+    <a href="https://www.kodnest.com">Click To Visit KodNest</a>
+    <br>
+    <br>
+    
+    <button onclick="setattribute()">Set Attribute</button>
+    <button onclick="getattribute()">get Attribute</button>
+    <button onclick="removeattribute()">Remove Attribute</button>
+
+    <script>
+        let link = document.querySelector("a");
+        function setattribute() {
+            link.setAttribute("href", "https://www.instagram.com");
+            link.innerText = "Click to visit Instagram";
+        }
+
+        function getattribute() {
+            let url = link.getAttribute("href");
+            alert("The url is" + url);
+        }
+
+        function removeattribute() {
+            let url = link.removeAttribute("href");
+            alert("The htef attr is removed");
+        }
+    </script>
+</body>
+</html>

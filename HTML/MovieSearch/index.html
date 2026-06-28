@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Page</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!--Login Page-->
+    <div class = "container" id="loginPage">
+        <div class="card">
+            <h2>Login</h2>
+            <input type="'email" id="email" placeholder="Enter Yout Email" required><br>
+            <input type="password" id="password" placeholder="Enter Your Password" required><br>
+            <button onclick="login()">Login</button>
+            <p id="errorMsg" style="color: red;"></p>
+        </div>
+    </div>
+
+    <!--Movie Page-->
+    <div id="moviepage">
+        <h1 style="text-align: center;">Movie Search</h1>
+        <div style="text-align: center; 
+        margin-bottom: 20px;">
+        <input type="text" id="searchInput" placeholder="Enter Your Movie name">
+        <button onclick="searchMovie()">Search</button>
+    </div>
+    <ul id="movieList">Movies here</ul>
+    </div>
+
+    <script>
+        const apiKey = "27375017"; //OMDB API KEY
+
+        async function login() {
+            const email = document.getElementId("email").value.trim();
+            const password = document.getElementId("password").value.trim();
+            const errorMsg = document.getElementById("errorMsg");
+
+            try {
+                //Load users.json
+                const res = await fetch("users.json");
+                const users = await res.json();
+
+                //Check if user exists
+                const user = users.find(u => u.email === email && u.password === password);
+                
+                if (users) {
+                    document.getElementById("LoginPage").style.display = "none";
+                    document.getElementById("moviepage").style.display = "block";
+                } else {
+                    errorMsg.textContent = "Invalid email or password";
+                }
+            } catch(err) {
+                console.log("Error Loading users.json:", err);
+            }
+        }
+
+        async function searchMovies() {
+            
+        }
+    </script>
+</body>
+</html>

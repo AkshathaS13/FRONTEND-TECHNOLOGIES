@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        body {
+            height: 300vh;
+
+        }
+        #myDiv {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h2>Mouse Event</h2>
+    <br>
+    <div id="myDiv"></div>
+    <br>
+    <br>
+    <input type="text">
+    <br>
+    <br>
+    <form>
+         <label>Enter name:</label>
+         <br>
+         <input type="text" id="myInput">
+        <button type="submit">Sumbit</button>
+    </form>
+   
+
+    <script>
+        //form Events
+        document.querySelector("form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Form sumbitted successfully");
+        });
+
+        document.querySelector("#myInput").addEventListener('focus', () => {
+            console.log("Input field focused!");
+        });
+
+        document.querySelector('#myInput').addEventListener('blur', () => {
+            console.log("Input field blur..");
+        });
+
+        document.querySelector('#myInput').addEventListener('change', (e) => {
+            console.log(`Input chnaged to: ${e.target.value}`);
+        });
+
+         document.querySelector('#myInput').addEventListener('input', (e) => {
+            console.log(`The Input is: ${e.target.value}`);
+        });
+
+
+        //Window addEventListener
+        window.addEventListener('DOMContentLoaded', () => {
+            alert("Content Loaded Successfully");
+        });
+
+        window.addEventListener('resize', () => {
+            alert("window Resized");
+        });
+
+        window.addEventListener('scroll', () => {
+            console.log("Window scrolled", window.scrollY);
+        });
+
+        
+
+        //Mouse Event
+        let box = document.getElementById("#myDiv");
+        box.addEventListener('click', () => {
+            box.style.backgroundColor = "red";
+        });
+        box.addEventListener('dblclick', () => {
+            box.style.backgroundColor = "yellow";
+            box.innerText = "User bdl clicked";
+        });
+        box.addEventListener('mouseover', () => {
+            box.style.backgroundColor = 'blue';
+        });
+        box.addEventListener('mouseout', () => {
+            box.style.backgroundColor = 'skyblue';
+        });
+        box.addEventListener('mousemove', (e) => {
+            box.innerText = `X value: ${e.offsetX} and Y value: ${e.offsetY}`;
+        });
+
+        //Keyboard Event 
+        let i = document.querySelector("input");
+        i.addEventListener('keydown', (event) => {
+            console.log("The ket pressed is", event.key);
+        });
+        i.addEventListener('keyup', (event) => {
+            console.log("The key released is ", event.key);
+        });
+        i.addEventListener('keypress', (e) => {
+            const pattern = /^[a-zA-Z]$/;
+
+            if(!pattern.test(event.key)) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
